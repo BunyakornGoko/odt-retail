@@ -163,7 +163,7 @@ export const ConfirmOrderPage = ({ orderId }: ConfirmOrderPageProps) => {
 
             <div class="flex justify-between">
               <a
-                href="/"
+                href="/products"
                 class="bg-gray-500 hover:bg-gray-600 text-white py-2 px-4 rounded"
               >
                 Cancel
