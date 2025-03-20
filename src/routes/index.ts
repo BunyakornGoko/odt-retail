@@ -31,7 +31,7 @@ const ensureUploadDir = async () => {
 ensureUploadDir();
 
 export const routes = new Elysia()
-  .get("/", ({ query }) => {
+  .get("/products", ({ query }) => {
     return HomePage({
       sortBy: query.sortBy || "default",
     });

@@ -25,7 +25,7 @@ export const Layout = ({ children, title = "Online Store" }: LayoutProps) => {
       <body class="bg-gray-100 min-h-screen">
         <header class="bg-white shadow-sm">
           <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="font-bold text-xl text-blue-600">
+            <a href="/products" class="font-bold text-xl text-blue-600">
               ODTS RETAIL
             </a>
             <a
