@@ -13,13 +13,13 @@ test("get all products", async ({ page }) => {
     }))
   )
 
-  // console.log(products) 
-
   for (const product of products) {
     if (product.name && product.price && product.description) {
       await expect(page.getByText(product.name + '' + product.description + product.price)).toBeVisible()
     }
   }
+
+  // console.log(products) 
 })
 
 // test("test", async ({ page }) => {
