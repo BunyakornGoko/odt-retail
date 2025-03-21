@@ -34,6 +34,9 @@ export class ProductsPage {
       }
     }
   }
-  
+
+  async clickIntoCart(){
+    await this.page.getByRole('link', { name: 'Cart' }).click();
+  }
 
 }
