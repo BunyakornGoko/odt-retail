@@ -1,25 +1,10 @@
 import { test, expect } from "@playwright/test"
+import { ProductsPage } from "../page-object/products-page"
 
 test("get all products", async ({ page }) => {
-  await page.goto("http://localhost:3000/products")
-  await expect(page.getByRole("heading", { name: "Products" })).toBeVisible()
-
-  // Extract product details and store them in a variable
-  const products = await page.$$eval(".product-item", (items) =>
-    items.map((item) => ({
-      name: item.querySelector(".product-name")?.textContent,
-      price: item.querySelector(".text-lg.font-bold")?.textContent,
-      description: item.querySelector(".text-gray-600.mt-2")?.textContent
-    }))
-  )
-
-  for (const product of products) {
-    if (product.name && product.price && product.description) {
-      await expect(page.getByText(product.name + '' + product.description + product.price)).toBeVisible()
-    }
-  }
-
-  // console.log(products) 
+  const productsPage = new ProductsPage(page)
+  await productsPage.gotoProductsPage()
+  await productsPage.displayProducts()
 })
 
 // test("test", async ({ page }) => {
