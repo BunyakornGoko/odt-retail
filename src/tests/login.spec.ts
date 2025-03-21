@@ -12,6 +12,9 @@ test('test', async ({ page }) => {
   await page.locator('input[name="customerEmail"]').click();
   await page.locator('input[name="customerEmail"]').fill('user@example.com');
   await page.getByRole('button', { name: 'Complete Order' }).click();
+  const qrImage = page.locator('img[alt="Payment QR Code"]');
+  // await page.waitForSelector('img[alt="Payment QR Code"]', { state: 'visible' }); // รอให้แสดง
+  await expect(qrImage).toBeVisible();
   // await page.getByText('Select Image').click();
   // await page.getByText('ODTS RETAILCartPaymentOrder').setInputFiles('./test_src/u-i-i-ai-o-uu-ii-a-i.jpeg');
   const fileInput = await page.locator('input[type="file"]');

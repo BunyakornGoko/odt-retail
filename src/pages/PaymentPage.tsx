@@ -34,7 +34,7 @@ export const PaymentPage = ({ orderData }: PaymentPageProps) => {
 
           <div class="flex justify-center py-3">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
+              src="/src/public/images/QRCode.png"
               class="w-64 h-64 md:w-80 md:h-80"
               alt="Payment QR Code"
             />
