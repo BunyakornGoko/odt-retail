@@ -10,7 +10,6 @@ test.describe("Show product success", () => {
   })
 })
 
-
 // test("test", async ({ page }) => {
 //   await page.goto("http://localhost:3000/products")
 //   await expect(page.getByRole("heading", { name: "Products" })).toBeVisible()
@@ -28,12 +27,3 @@ test.describe("Show product success", () => {
 //   await page.locator('input[name="customerEmail"]').click()
 //   await page.locator('input[name="customerEmail"]').fill("goko@gmail.com")
 //   await page.getByRole("button", { name: "Complete Order" }).click()
-
-//   const fileInput = await page.locator('input[type="file"]')
-//   await fileInput.setInputFiles(
-//     "src/picture/27c18b14-24e4-4246-b46f-a34c1637867f.jpeg"
-//   )
-
-//   await page.getByRole("button", { name: "Complete Payment" }).click()
-//   await expect(page.getByRole("heading", { name: "คำสั่งซื้อเสร็จสมบูรณ์" })).toBeVisible()
-// })
