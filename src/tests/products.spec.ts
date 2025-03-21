@@ -1,11 +1,15 @@
-import { test, expect } from "@playwright/test"
+import { test } from "@playwright/test"
 import { ProductsPage } from "../page-object/products-page"
 
-test("get all products", async ({ page }) => {
-  const productsPage = new ProductsPage(page)
-  await productsPage.gotoProductsPage()
-  await productsPage.displayProducts()
+test.describe("Show product success", () => {
+
+  test("Show all products", async ({ page }) => {
+    const productsPage = new ProductsPage(page)
+    await productsPage.gotoProductsPage()
+    await productsPage.displayProducts()
+  })
 })
+
 
 // test("test", async ({ page }) => {
 //   await page.goto("http://localhost:3000/products")
