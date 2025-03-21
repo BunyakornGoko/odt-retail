@@ -7,6 +7,11 @@ test("get all products", async ({ page }) => {
   await productsPage.displayProducts()
 })
 
+// test("go wrong path", async ({ page }) => {
+//   const productsPage = new ProductsPage(page)
+//   await productsPage.gotoProductsPage()
+// })
+
 // test("test", async ({ page }) => {
 //   await page.goto("http://localhost:3000/products")
 //   await expect(page.getByRole("heading", { name: "Products" })).toBeVisible()

@@ -11,6 +11,10 @@ export class ProductsPage {
     await this.page.goto("http://localhost:3000/products")
   }
 
+  async gotoWrongPath() {
+    await this.page.goto("http://localhost:3000/product")
+  }
+
   async displayProducts() {
     await expect(
       this.page.getByRole("heading", { name: "Products" })
@@ -33,5 +37,6 @@ export class ProductsPage {
         ).toBeVisible()
       }
     }
+    
   }
 }
